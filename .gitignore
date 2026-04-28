@@ -1,0 +1,7 @@
+config.json
+google_token.json
+*.pyc
+__pycache__/
+.env
+*.log
+run_logs/

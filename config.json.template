@@ -1,0 +1,13 @@
+{
+  "zoho_email": "avinash.pullela@citacinc.com",
+  "zoho_app_password": "YOUR_ZOHO_APP_PASSWORD",
+  "zoho_imap_host": "imappro.zoho.com",
+  "zoho_imap_port": 993,
+  "hunter_api_key": "YOUR_HUNTER_API_KEY",
+  "apollo_api_key": "YOUR_APOLLO_API_KEY",
+  "google_sheet_id": "1sm6gBK9tF61HbLbArzlVWTGj3_cX8bAKNpqvncNNcJs",
+  "google_token_path": "google_token.json",
+  "from_email": "avinash.pullela@citacinc.com",
+  "sender_name": "Avinash Pullela",
+  "sender_title": "Tata AutoComp Systems (TACO)"
+}
