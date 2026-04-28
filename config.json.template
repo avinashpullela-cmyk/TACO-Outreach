@@ -7,6 +7,8 @@
   "apollo_api_key": "YOUR_APOLLO_API_KEY",
   "google_sheet_id": "1sm6gBK9tF61HbLbArzlVWTGj3_cX8bAKNpqvncNNcJs",
   "google_token_path": "google_token.json",
+  "google_client_id": "YOUR_GOOGLE_OAUTH_CLIENT_ID",
+  "google_client_secret": "YOUR_GOOGLE_OAUTH_CLIENT_SECRET",
   "from_email": "avinash.pullela@citacinc.com",
   "sender_name": "Avinash Pullela",
   "sender_title": "Tata AutoComp Systems (TACO)"
