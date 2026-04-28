@@ -31,7 +31,7 @@ def save_draft(cfg: dict, to_addr: str, subject: str, body: str) -> bool:
     imap_date = imaplib.Time2Internaldate(datetime.now(timezone.utc).timestamp())
 
     try:
-        mail = imaplib.IMAP4_SSL(host, port)
+        mail = imaplib.IMAP4_SSL(host, port, timeout=10)
         mail.login(user, password)
 
         drafts_folder = _find_drafts_folder(mail)

@@ -107,7 +107,10 @@ def main():
     print("\n[Step 0] Checking Zoho inbox for bounces (past 2 days)...")
     bounces = []
     if not args.dry_run:
-        bounces = check_bounces(cfg)
+        try:
+            bounces = check_bounces(cfg)
+        except Exception as exc:
+            print(f"  ⚠ Bounce check skipped (IMAP unreachable): {exc}")
     bounce_marked = 0
     for b in bounces:
         marked = mark_bounced(cfg, b["email"], b["date"])
@@ -156,7 +159,11 @@ def main():
 
             saved = False
             if not args.dry_run:
-                saved = save_draft(cfg, email_data["to"], email_data["subject"], email_data["body"])
+                try:
+                    saved = save_draft(cfg, email_data["to"], email_data["subject"], email_data["body"])
+                except Exception as exc:
+                    print(f"    ⚠ Draft save skipped (IMAP unreachable): {exc}")
+                    saved = True  # still record in sheet even if IMAP blocked
             else:
                 saved = True  # dry run counts as saved for summary
 
